@@ -6,7 +6,7 @@
 #    By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/13 20:55:48 by mazor             #+#    #+#              #
-#    Updated: 2020/05/20 16:40:36 by mazor            ###   ########.fr        #
+#    Updated: 2020/05/21 07:56:53 by mazor            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ clean :
 
 fclean : clean
 	@rm -rf $(NAME)
+	@rm -rf libft.so
 
 re: fclean all
 
