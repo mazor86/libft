@@ -6,7 +6,7 @@
 /*   By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/01 21:56:48 by mazor             #+#    #+#             */
-/*   Updated: 2020/10/19 22:07:13 by mazor            ###   ########.fr       */
+/*   Updated: 2020/10/20 17:28:36 by mazor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int					ft_atoi(const char *nptr);
 double				ft_atof(const char *nptr);
+int					ft_count_char(char *str, char c);
 char				*ft_itoa(int n);
 int					ft_is_float(const char *str);
 int					ft_isascii(int c);

@@ -6,7 +6,7 @@
 #    By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/13 20:55:48 by mazor             #+#    #+#              #
-#    Updated: 2020/10/19 22:08:12 by mazor            ###   ########.fr        #
+#    Updated: 2020/10/20 17:29:09 by mazor            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC = ft_atoi.c          ft_bzero.c        	ft_calloc.c         ft_isalnum.c\
 	  ft_putendl_fd.c    ft_putnbr_fd.c     ft_isspace_bonus.c\
 	  ft_islower_bonus.c                    ft_isupper_bonus.c\
 	  ft_putstr_bonus.c                     ft_strcmp_bonus.c\
-	  ft_atof_bonus.c						ft_is_float_bonus.c
+	  ft_atof_bonus.c						ft_is_float_bonus.c\
+	  ft_count_char_bonus.c\
 
 SRCBONUS = ft_lstnew.c		 ft_lstadd_back.c		ft_lstadd_front.c\
 		   ft_lstclear.c     ft_lstdelone.c         ft_lstiter.c\
