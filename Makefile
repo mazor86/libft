@@ -6,7 +6,7 @@
 #    By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/13 20:55:48 by mazor             #+#    #+#              #
-#    Updated: 2020/05/21 07:56:53 by mazor            ###   ########.fr        #
+#    Updated: 2020/10/19 22:08:12 by mazor            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRC = ft_atoi.c          ft_bzero.c        	ft_calloc.c         ft_isalnum.c\
 	  ft_strnstr.c       ft_strrchr.c       ft_strtrim.c        ft_substr.c\
 	  ft_tolower.c       ft_toupper.c       ft_putchar_fd.c     ft_putstr_fd.c\
 	  ft_putendl_fd.c    ft_putnbr_fd.c     ft_isspace_bonus.c\
-	  ft_islower_bonus.c                    ft_isupper_bonus.c
+	  ft_islower_bonus.c                    ft_isupper_bonus.c\
+	  ft_putstr_bonus.c                     ft_strcmp_bonus.c\
+	  ft_atof_bonus.c						ft_is_float_bonus.c
 
 SRCBONUS = ft_lstnew.c		 ft_lstadd_back.c		ft_lstadd_front.c\
 		   ft_lstclear.c     ft_lstdelone.c         ft_lstiter.c\
@@ -35,29 +37,26 @@ OBJ = $(SRC:.c=.o)
 OBJBONUS = $(SRCBONUS:.c=.o)
 
 all : $(NAME)
+
 $(NAME) : $(OBJ) $(INCLUDE)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 bonus : $(OBJ) $(OBJBONUS) $(INCLUDE)
-	@ar rc $(NAME) $(OBJBONUS)
-	@ranlib $(NAME)
+	ar rc $(NAME) $(OBJBONUS)
+	ranlib $(NAME)
 
 %.o : %.c
 	gcc $(FLAGS) -c -o $@ $<
 
 clean : 
-	@rm -rf *.o
+	rm -rf $(OBJ) $(OBJBONUS) 
 
 fclean : clean
-	@rm -rf $(NAME)
-	@rm -rf libft.so
+	rm -rf $(NAME)
 
 re: fclean all
 
-so:
-	gcc -c -fPIC ft_*.c
-	gcc -shared -o libft.so ft_*.o
 rebonus: fclean bonus
 
 .PHONY: all bonus clean fclean re rebonus
