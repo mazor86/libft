@@ -6,7 +6,7 @@
 #    By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/13 20:55:48 by mazor             #+#    #+#              #
-#    Updated: 2020/10/20 17:29:09 by mazor            ###   ########.fr        #
+#    Updated: 2020/10/21 14:54:10 by mazor            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,12 +39,12 @@ OBJBONUS = $(SRCBONUS:.c=.o)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) $(INCLUDE)
-	ar rc $(NAME) $(OBJ)
+$(NAME) : $(OBJ) $(INCLUDE) $(OBJBONUS)
+	ar rc $(NAME) $(OBJ) $(OBJBONUS)
 	ranlib $(NAME)
 
 bonus : $(OBJ) $(OBJBONUS) $(INCLUDE)
-	ar rc $(NAME) $(OBJBONUS)
+	ar rc $(NAME) $(OBJ) $(OBJBONUS)
 	ranlib $(NAME)
 
 %.o : %.c
