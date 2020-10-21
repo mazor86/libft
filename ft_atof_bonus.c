@@ -6,7 +6,7 @@
 /*   By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 22:04:29 by mazor             #+#    #+#             */
-/*   Updated: 2020/10/19 22:08:43 by mazor            ###   ########.fr       */
+/*   Updated: 2020/10/21 16:00:24 by mazor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ double	ft_atof(const char *str)
 		str++;
 	sign = (*str == '-') ? -1 : 1;
 	integer = (double)ft_atoi(str) * sign;
-	while (*str != '.')
+	while (*str != '.' && *str)
 		str++;
 	fraction = (double)ft_atoi(++str);
 	while (ft_isdigit(*str++))
