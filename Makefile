@@ -6,7 +6,7 @@
 #    By: mazor <mazor@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/13 20:55:48 by mazor             #+#    #+#              #
-#    Updated: 2020/10/21 14:54:10 by mazor            ###   ########.fr        #
+#    Updated: 2020/10/31 14:05:27 by mazor            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ bonus : $(OBJ) $(OBJBONUS) $(INCLUDE)
 	ar rc $(NAME) $(OBJ) $(OBJBONUS)
 	ranlib $(NAME)
 
-%.o : %.c
+%.o : %.c $(INLUDE)
 	gcc $(FLAGS) -c -o $@ $<
 
 clean : 
